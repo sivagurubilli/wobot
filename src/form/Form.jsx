@@ -3,44 +3,41 @@ import  "./form.css";
 const totalLocationData = ["1-20", "21-50", "51-200", "201-500", "500+"];
 
  const Form = () => {
-  const [totalLocation, setTotalLocation] = useState(1);
+ 
+    const [Location, setLocation] = useState(1);
 
-  const handleAddLocation = (el, event) => {
-    event.preventDefault();
-    setTotalLocation(el);
-  };
-
-  const handleSubmitForm = (e) => {
-    e.preventDefault()
-
-    // console.log("APPPLE");
-  };
+    const handleLocation = (el, event) => {
+      event.preventDefault();
+      setLocation(el);
+    };
+  
+ 
 
   return (
     <div className={"main_container"}>
-      <div className={"background_main_container"}>
-        <div className={"background_container_left"}></div>
-        <div className={"background_container_right"}></div>
+      <div className={"main_container1"}>
+        <div className={"container_left"}></div>
+        <div className={"container_right"}></div>
       </div>
       <div className={"card_main_container"}>
         <div className={"logo"}>
           <img
-            style={{ width: "160px" }}
+           className="image"
             src="https://wobot.ai/wobot_logo_blue.svg"
             alt="wobot logo"
           />
         </div>
-        <form onSubmit={handleSubmitForm}>
+        <form >
           <div className={"card_container"}>
             <div className={"logo_group"}>
               <img style={{ width: "52px" }} src={"https://zenprospect-production.s3.amazonaws.com/uploads/pictures/64b12cd14c00290001df4e9c/picture"} alt="logo" />
               </div>
               <div className="text_center">
-              <p style={{ fontSize: "26px", fontWeight: "500" }}>
+              <p className="mainfont">
                 It's a delight to have you onboard
               </p>
               <p>Help us known you better.</p>
-              <p style={{ fontSize: "14px" }}>
+              <p className="secondfont">
                 (This is how we optimize 
                 <br/>
                 Wobot as per your business needs)
@@ -75,11 +72,11 @@ const totalLocationData = ["1-20", "21-50", "51-200", "201-500", "500+"];
                 {totalLocationData?.map((el, i) => (
                   <button
                     className={
-                      el == totalLocation
+                      el == Location
                         ? "button_click"
                         : "button_not"
                     }
-                    onClick={(event) => handleAddLocation(`${el}`, event)}
+                    onClick={(event) => handleLocation(`${el}`, event)}
                     key={i}
                   >
                     {el}
