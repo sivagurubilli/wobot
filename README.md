@@ -7,7 +7,8 @@ This project is about wobot company assignment for a frontend role which is abou
 3. redux
 4. html
 5. css
-   
+
+# live demo of application -- https://64c3fe73edee7a238dfffcdc--darling-yeot-f74927.netlify.app/   
 # Getting Started
 1. Clone this repository.
 2. Install dependencies with npm install.
