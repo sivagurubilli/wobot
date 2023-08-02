@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import  "./form.css";
-const totalLocationData = ["1-20", "21-50", "51-200", "201-500", "500+"];
+const Data = ["1-20", "21-50", "51-200", "201-500", "500+"];
 
  const Form = () => {
  
@@ -69,7 +69,7 @@ const totalLocationData = ["1-20", "21-50", "51-200", "201-500", "500+"];
             <div className={"input_group"}>
               <label htmlFor="input-address">Number of locations</label>
               <div className={"number_location"}>
-                {totalLocationData?.map((el, i) => (
+                {Data?.map((el, i) => (
                   <button
                     className={
                       el == Location
